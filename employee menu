@@ -1,0 +1,119 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+class Emp1{
+	private  int empno;
+	private String ename;
+	private double salary;
+	public int getEmpno() {
+		return empno;
+	}
+	public void setEmpno(int empno) {
+		this.empno = empno;
+	}
+	public String getEname() {
+		return ename;
+	}
+	public void setEname(String ename) {
+		this.ename = ename;
+	}
+	public double getSalary() {
+		return salary;
+	}
+	public void setSalary(double salary) {
+		this.salary = salary;
+	}	
+
+	
+}
+public class sample {
+
+	public static void main(String[] args) throws Exception
+	{
+		ArrayList<Emp1>employes=new ArrayList<>();
+		System.out.println("1.create  2. update  3.delete  4.Display 5.exit");
+		Scanner sc =new Scanner(System.in);
+		while(true)
+		{
+			System.out.println("enter your choice:");
+			int n=sc.nextInt();
+			if(n==1)
+			{
+				System.out.println("enter the employee no,name,salary:");
+				String s=sc.next();
+				String list[]=s.trim().split(",");
+				Emp1 e=new Emp1();
+				e.setEmpno(Integer.parseInt(list[0]));
+				e.setEname(list[1]);
+				e.setSalary(Integer.parseInt(list[2]));
+				employes.add(e);
+			}
+			else if(n==2)
+			{
+				int flag=0;
+				System.out.println("enter the employee no,name,salary to be updated:");
+				String s=sc.next();
+				String list[]=s.trim().split(",");
+				for(Emp1 i : employes)
+				{
+					if(i.getEmpno()==Integer.parseInt(list[0]))
+					{
+						i.setEname(list[1]);
+						i.setSalary(Integer.parseInt(list[2]));
+					flag=1;
+					}
+				}
+				if (flag==0)
+				{
+					System.out.println("empno not found");
+				}
+				else
+				{
+					System.out.println("record updated succesfully");
+				}
+			}
+			else if(n==3)
+			{
+				System.out.println("enter the emp no to delete:");
+				int flag=0;
+				int temp=sc.nextInt();
+				System.out.println("hi");
+				for(Emp1 i : employes){
+					if(i.getEmpno()==temp)
+					{
+						Emp1 ref=i;
+						employes.remove(ref);
+						flag=1;
+						break;
+					}
+				}
+				if (flag==0)
+				{
+					System.out.println("empno not found");
+				}
+				else
+				{
+					System.out.println("record deleted succesfully");
+				}
+
+			}
+			else if(n==4)
+			{
+				for(Emp1 i : employes){
+					System.out.println(i.getEmpno()+" "+i.getEname()+" "+i.getSalary());}
+			}
+			else if(n==5)
+			{
+				System.out.println("exiting...");
+				break;
+			}
+			else
+			{
+				System.out.println("you entered an invalid option ");
+			}
+			}
+		sc.close();
+		}
+
+	}
+
