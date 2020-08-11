@@ -1,0 +1,55 @@
+import java.util.Scanner;
+
+class Emp{
+	private  int empno;
+	private String ename;
+	private double salary;
+	public int getEmpno() {
+		return empno;
+	}
+	public void setEmpno(int empno) {
+		this.empno = empno;
+	}
+	public String getEname() {
+		return ename;
+	}
+	public void setEname(String ename) {
+		this.ename = ename;
+	}
+	public double getSalary() {
+		return salary;
+	}
+	public void setSalary(double salary) {
+		this.salary = salary;
+	}	
+
+	
+}
+	public class Lab2 {
+
+	public static void main(String[] args) {
+		Emp empobjects[]= new Emp[5];
+		Scanner sc=new Scanner(System.in);
+		for(int i=0;i<5;i++)
+		{
+			empobjects[i]=new Emp();
+			System.out.println("enter empno , name , salary : ");
+			String s=sc.nextLine();
+			String list[]=s.trim().split(",");
+			empobjects[i].setEmpno(Integer.parseInt(list[0]));
+			empobjects[i].setEname(list[1]);
+			empobjects[i].setSalary(Double.parseDouble(list[2]));
+				
+		}
+		sc.close();
+		for(int i=0;i<5;i++)
+		{
+			System.out.println("Details of employee "+(i+1)+" :" );
+			System.out.println("Empno of employee "+(i+1)+" is "+empobjects[i].getEmpno() );
+			System.out.println("name of employee "+(i+1)+" is "+empobjects[i].getEname() );
+			System.out.println("salary of employee "+(i+1)+" is "+empobjects[i].getSalary() );
+			
+		}
+	}
+
+}
