@@ -1,0 +1,70 @@
+import java.util.Arrays;
+ 
+class Stack 
+{
+    private int size = 0;
+    private static final int DEFAULT_CAPACITY = 10;
+    private int elements[];
+    public Stack() {
+        elements = new int[DEFAULT_CAPACITY];
+    }
+ 
+    public void push (int e) {
+        if (size == DEFAULT_CAPACITY) {
+            System.out.println("stack is full");
+        }
+        else{
+        elements[size] = e;
+        size+=1;
+        System.out.println("element is inserted");
+        }
+    }
+ 
+    public String pop() {
+        elements = Arrays.copyOfRange(elements,0,--size);
+        return toString();
+    }
+    public int peek()
+    {
+    	return elements[size-1];
+    }
+ 
+     
+    @Override
+    public String toString()
+    {
+         StringBuilder sb = new StringBuilder();
+         sb.append('[');
+         for(int i = 0; i < size ;i++) {
+             sb.append(elements[i]);
+             if(i < size-1){
+                 sb.append(",");
+             }
+         }
+         sb.append(']');
+         return sb.toString();
+    }
+}
+
+public class Stackimpl
+{
+    public static void main(String[] args) 
+    {
+        Stack mystack = new Stack();
+ 
+        mystack.push(10);
+        mystack.push(20);
+        mystack.push(30);
+        mystack.push(40);
+         
+        System.out.println(mystack);
+        System.out.println("the top element is " + mystack.peek());
+        System.out.println( "array after poping is "+ mystack.pop() );
+        System.out.println("the top element is " + mystack.peek());
+        System.out.println( "array after poping is "+ mystack.pop() );
+        System.out.println("the top element is " + mystack.peek());
+        System.out.println( "array after poping is "+ mystack.pop() );
+         
+        System.out.println( mystack );
+    }
+}
