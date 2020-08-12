@@ -1,0 +1,6 @@
+queue implementation using array
+
+1) create an array of size n and take two variables front=0 and rear=0 (because array is empty)
+2) for adding an element first we should check if queue is full or not.if rear<n then we can insert element at array[rear]
+   and increment rear
+3)for deleting an element first we should check if rear>0(which means array is not empty).Now, element at array[front] can be deleted but all the remaining elements have to shifted to the left by one position .
