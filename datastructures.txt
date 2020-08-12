@@ -1,4 +1,4 @@
 Arrays-Random access,Static allocation,Index based access,use it when size is known
-Linked List-Sequential access,Dynamic allocation,first in first out,use it when lots of modification is required
+Linked List-Sequential access,Dynamic allocation,access randomly by traversing,use it when lots of modification is required
 Stack-Sequential access,Dynamic memory alloction,Last in first out,used for parsing
 queue-Sequential access,Dynamic memory alloction,First in last out,easy to access data
