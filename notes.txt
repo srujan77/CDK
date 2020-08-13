@@ -1,0 +1,29 @@
+Day 1:
+
+source code: the code written by programmer is called source code. It is in high level language.
+Object code: the source code is converted into machine understanble laguage.This machine understandable code is object code.
+keywords: There are some specific words which are reserved and recognised by compiler like for,if,class,interface...
+variables: which can store a value and can be modified at any time.
+variable scope: variables have 2 scopes(local and global).
+Declare array: array can be created with a fixed size. It has static memory allocation.
+store data in array and process elements:  we can store and process array elements by looping through the array
+------------------------------------------------------------------------------------------------------------------------
+Day 2:
+
+Pointers:pointers are variables which store address of another variable.
+Function Definition: A function definition tells us about dunction name,return type,its access specifier,arguments it take.
+call by value: It is an approach of calling a function in which we send the copy of variables to the function. so changes made in function are not reflected in main.
+call by reference:It is an approach of calling a function in which we send the address of variables to the function. so changes made in function are reflected in main.
+Dynamic memory allocation: It means that allocation memory to a variable at run time.
+memory leakage: If we allocate memory to a variable(or reference) and we are not using it and not releasing the memory for a long time	then the memory is wasted. It 		is called as memory leakage.
+------------------------------------------------------------------------------------------------------------------------
+
+Day 3:
+
+Data structures: Data structures are used to store and handle large data.ex:arrays,linkedlist,stack,queue,tree.
+Linked List: Linked list is a data structure which has  nodes.each node contains two fields value and pointer to next node.
+Stack : Stack follows last in first out approach.Insertion and deletion occur at same end. It can be used for parsing.
+Queue: Queue follows First in first out approach.Insertion is done at one end and Deletion is done at other end.
+tree:  A tree is a hierarchical data structure. It is used to store data in in heirarchy.first element or node is called Root.A treehas Root, parentNode, ChildNode, 	LeafNodes.example :Directory structure.
+Binary tree: It is a special type of tree where each node has only 2 child nodes(leftchild,rightchild).
+
