@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>array</title>
+<script type="text/javascript">
+ var names=[];
+ var count=0,i;
+ function add(){
+	 names[count]=document.getElementById("name").value;
+	 count+=1;
+	 var str=''
+	 for(i=0;i<names.length;i++)
+		 {
+			str += "<tr><td>" + names[i]  + "</td></tr>"
+		 }
+	 document.getElementById("mytable").innerHTML = str;
+	 
+	 
+ }
+ 
+</script>
+</head>
+<body>
+Name<input type='text' id='name'><br/>
+<input type="button" value='ADD' onclick="add()">
+<div >
+<table id='mytable' border=solid>
+<tr>
+<td>Name</td>
+</tr>
+</table>
+</div>
+
+</body>
+</html>
