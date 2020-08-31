@@ -5,9 +5,10 @@ import java.util.Scanner;
 import com.pojo.Product;
 
 public class ProductIO {
-
+	static Scanner sc = new Scanner(System.in);
+	
 	public Product getProduct(){
-		Scanner sc = new Scanner(System.in);
+		// sc = new Scanner(System.in);
 		System.out.println("enter the product id :");
 		int pId=sc.nextInt();
 		System.out.println("enter the product name :");
@@ -18,7 +19,7 @@ public class ProductIO {
 		int quantity= sc.nextInt();
 		System.out.println("enter the product category :");
 		String  category=sc.next().trim();
-		sc.close();
+		//sc.close();
 		return new Product(pId, pName, price, quantity, category);
 	}
 	public void displayProduct(Product product)
